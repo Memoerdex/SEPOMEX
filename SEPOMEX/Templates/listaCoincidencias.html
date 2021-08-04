@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{busqueda}}</title>
+</head>
+<body>
+<div>
+    <a href="{{url_for('inicio')}}">Regresar al inicio</a>
+</div>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Colonia</th>
+                <th>Municipio</th>
+                <th>Estado</th>
+                <th>Codigo Postal</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{registro.colonia}}</td>
+                <td>{{registro.municipio}}</td>
+                <td>{{registro.estado}}</td>
+                <td>{{registro.cp}}</td>
+                <td><a href="ver/{{registro.id}}">Ver</a> </td>
+                <td><a href="editar/{{registro.id}}">Editar</a> </td>
+                <td><a href="eliminar/{{registro.id}}">Eliminar</a> </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

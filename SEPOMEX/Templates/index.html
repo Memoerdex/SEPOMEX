@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Base de Datos SEPOMEX</title>
+</head>
+<body>
+<h1>Sistema de Adminitracion de Registros SEPOMEX</h1>
+<div>
+    Total de registros en la base de datos: {{totalRegistros}}
+</div>
+<p></p>
+<div>
+    <form action="/buscar/" method="post">
+        Buscar por Nombre
+        <input name="nm" type="text" value="" size="40" maxlength="40" /><input type = "submit" value = "Buscar" />
+    </form>
+</div>
+<p></p>
+<div>
+    <form action="/buscar/" method="post">
+        Buscar por Codigo Postal
+        <input name="nm" type="text" value="" size="40" maxlength="40" /><input type = "submit" value = "Buscar" />
+    </form>
+</div>
+<p></p>
+<a href="{{url_for('agregar')}}">Agregar Registro</a>
+</body>
+</html>

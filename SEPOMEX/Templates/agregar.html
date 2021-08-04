@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Registro</title>
+</head>
+<body>
+<h1>Agregar Registro</h1>
+<form method="POST">
+    {{forma.csrf_token}}
+    <p>
+        {{forma.colonia.label}}<br/>
+        {{forma.colonia(size=30)}}
+    </p>
+    <p>
+        {{forma.municipio.label}}<br/>
+        {{forma.municipio(size=30)}}
+    </p>
+    <p>
+        {{forma.estado.label}}<br/>
+        {{forma.estado(size=30)}}
+    </p>
+    <p>
+        {{forma.cp.label}}<br/>
+        {{forma.cp(size=30)}}
+    </p>
+    <p>
+        {{forma.idasent.label}}<br/>
+        {{forma.idasent(size=30)}}
+    </p>
+    <p>
+        {{forma.enviar()}}
+    </p>
+</form>
+</body>
+</html>
